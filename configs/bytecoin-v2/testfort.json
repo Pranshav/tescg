@@ -1,68 +1,54 @@
 {
+  "extensions": [
+    "core/bytecoin.json",
+    "bug-fixes.json",
+    "print-genesis-tx.json",
+    "simplewallet-default-fee.json",
+    "genesis-block-reward.json",
+    "block-hosts.json",
+    "blockchain-explorer.json",
+    "get-blockchain-settings.json",,
+    "simplewallet-import-keys.json",
+    "simplewallet-export-keys.json",
+  ],
+  "base_coin": "bytecoin-v2",
+  "core": {
+    "CRYPTONOTE_NAME": "testfort",
+    "CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX": 69,
+    "P2P_DEFAULT_PORT": 8080,
+    "RPC_DEFAULT_PORT": 8081,
 
-/* Extensions to load */
-"extensions": [ "core/bytecoin.json", 
-	       "print-genesis-tx.json", 
-	       "simplewallet-default-fee.json", 
-	       "simplewallet-import-keys.json", 
-	       "simplewallet-export-keys.json ],
+    "SEED_NODES":[
+      "18.118.114.227:8080", 
+      "3.134.116.128:8080"
+    ],
+    
+    "GENESIS_COINBASE_TX_HEX": "",
+    "BYTECOIN_NETWORK": "11100111-1100-0101-1011-001210110110",
+    "UPGRADE_HEIGHT": 546602,
+    "BYTECOIN_NETWORK":"0x21, 0x32, 0x41, 0x21, 0x14, 0x10, 0x41, 0x01, 0x13, 0x11, 0x00, 0x12, 0x12, 0x11, 0x01, 0x10",
+    "BYTECOIN_NETWORK": "11100111-1100-0101-1011-001210110110",
+	  
+    "MONEY_SUPPLY":"static_cast<uint64_t>(-1)",
+    "EMISSION_SPEED_FACTOR":18,
+    "GENESIS_BLOCK_REWARD":44444440,
+    "DIFFICULTY_TARGET":120,   // In seconds
 
-/* Source coin. Bytecoin example. See the available base coins here: https://github.com/forknote/cryptonote-generator/tree/master/cores */
-"base_coin": "bytecoin-v2",
+    "MINIMUM_FEE":1000,   // 10^6. Equals to 0.01 in Dashcoin
+    "DEFAULT_DUST_THRESHOLD":1000000,
+    "COIN":100000000,    // Number of atom units in a coin. 10^8 in Dashcoin
+    "CRYPTONOTE_DISPLAY_DECIMAL_POINT":8,    // The pow from the previews value
 
-"core":{
-	/* Check uniqueness with Google and Map of Coins. */
-	"CRYPTONOTE_NAME":"testfort",
+    "CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW":10,    // in blocks
+    "CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE":20000,    // in bytes
 
-	/* Address prefix. Generate here: https://cryptonotestarter.org/inner.html */
-	"CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX":72,
-
-	"P2P_DEFAULT_PORT":8080,
-	"RPC_DEFAULT_PORT":8042,
-
-	/* Seed nodes. Use at least 2 */
-	"SEED_NODES":["18.118.114.227:8080", "3.134.116.128:8080"],
-
-	/* Array with checkpoints. */
-	"CHECKPOINTS":[],
-
-	/* Created with connectivity_tool. Leave empty if not needed */
-	"P2P_STAT_TRUSTED_PUB_KEY":"4d26c4df7f4ca7037950ad026f9ab36dd05d881952662992f2e4dcfcafbe57eb",
-
-	/* Genesis! Leave empty for new coins */
-	"GENESIS_COINBASE_TX_HEX":"",
-	/* Random hex, identifier for your network */
-	"BYTECOIN_NETWORK":"0x11, 0x12, 0x31, 0x21, 0x14, 0x10, 0x41, 0x01, 0x13, 0x11, 0x00, 0x12, 0x12, 0x11, 0x01, 0x10",
-
-	/* Visualize here https://cryptonotestarter.org/inner.html  */
-	/* Total amount of coins to be emitted. Most of CryptoNote-based coins use (uint64_t)(-1) (equals to 18446744073709551616).
-	   You can define number explicitly (for example UINT64_C(858986905600000000)). */
-	"MONEY_SUPPLY":"static_cast<uint64_t>(-1)",
-	"EMISSION_SPEED_FACTOR":18,
-	"GENESIS_BLOCK_REWARD":44444440,
-	"DIFFICULTY_TARGET":120,   // In seconds
-
-	"MINIMUM_FEE":1000,   // 10^6. Equals to 0.01 in Dashcoin
-	"DEFAULT_DUST_THRESHOLD":1000000,
-	"COIN":100000000,    // Number of atom units in a coin. 10^8 in Dashcoin
-	"CRYPTONOTE_DISPLAY_DECIMAL_POINT":8,    // The pow from the previews value
-
-	"CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW":10,    // in blocks
-	"CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE":20000,    // in bytes
-
-	"DIFFICULTY_CUT":60,  // timestamps to cut after sorting
-	"DIFFICULTY_LAG":15,
-
-	/* USED ONLY IN OLD COINS. IF YOU UPDATE CHANGE THIS TO YOUR OLD CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE */
-	"CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1":10000,
-
-	/* ONLY USED IN OLD COINS. IT WILL HARDFORK YOUR COIN AT THIS BLOCK */
-	"UPGRADE_HEIGHT":91452,
+    "DIFFICULTY_CUT":60,  // timestamps to cut after sorting
+    "DIFFICULTY_LAG":15,
 
 	/* Max initial block size */
-	"MAX_BLOCK_SIZE_INITIAL":"25 * 1024"
+    "MAX_BLOCK_SIZE_INITIAL":"25 * 1024"
 
 	/* Max initial block size */
-	"EXPECTED_NUMBER_OF_BLOCKS_PER_DAY":"24 * 60 * 60 / 120"
-}
+    "EXPECTED_NUMBER_OF_BLOCKS_PER_DAY":"24 * 60 * 60 / 120"
+  }
 }
