@@ -5,9 +5,7 @@
     "print-genesis-tx.json",
     "simplewallet-default-fee.json",
     "genesis-block-reward.json",
-    "block-hosts.json",
     "blockchain-explorer.json",
-    "get-blockchain-settings.json",,
     "simplewallet-import-keys.json",
     "simplewallet-export-keys.json",
   ],
@@ -24,10 +22,7 @@
     ],
     
     "GENESIS_COINBASE_TX_HEX": "",
-    "BYTECOIN_NETWORK": "11100111-1100-0101-1011-001210110110",
-    "UPGRADE_HEIGHT": 546602,
     "BYTECOIN_NETWORK":"0x21, 0x32, 0x41, 0x21, 0x14, 0x10, 0x41, 0x01, 0x13, 0x11, 0x00, 0x12, 0x12, 0x11, 0x01, 0x10",
-    "BYTECOIN_NETWORK": "11100111-1100-0101-1011-001210110110",
 	  
     "MONEY_SUPPLY":"static_cast<uint64_t>(-1)",
     "EMISSION_SPEED_FACTOR":18,
